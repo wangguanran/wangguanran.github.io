@@ -2,7 +2,7 @@
  * @Author: WangGuanran
  * @Email: wangguanran@vanzotec.com
  * @Date: 2020-04-11 10:57:08
- * @LastEditTime: 2020-04-11 10:57:21
+ * @LastEditTime: 2020-04-11 11:01:34
  * @LastEditors: WangGuanran
  * @Description: CI File
  * @FilePath: /wangguanran.github.io/.travis.yml
@@ -14,7 +14,7 @@ node_js:
 cache: npm
 branches:
     only:
-        - master # build master branch only
+        - docs # build master branch only
 script:
         - hexo generate # generate static files
 deploy:
