@@ -2,7 +2,7 @@
  * @Author: WangGuanran
  * @Email: wangguanran@vanzotec.com
  * @Date: 2020-04-11 10:57:08
- * @LastEditTime: 2020-04-11 11:01:34
+ * @LastEditTime: 2020-04-11 11:54:31
  * @LastEditors: WangGuanran
  * @Description: CI File
  * @FilePath: /wangguanran.github.io/.travis.yml
@@ -10,18 +10,18 @@
 sudo: false
 language: node_js
 node_js:
-    - 10 # use nodejs v10 LTS
+  - 10 # use nodejs v10 LTS
 cache: npm
 branches:
-    only:
-        - docs # build master branch only
+  only:
+    - docs # build master branch only
 script:
-        - hexo generate # generate static files
+  - hexo generate # generate static files
 deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $GH_TOKEN
-    keep-history: true
-    on:
-        branch: master
-        local-dir: public
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
